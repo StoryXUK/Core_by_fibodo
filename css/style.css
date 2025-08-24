@@ -11676,10 +11676,15 @@ body:has(#search.open):before {
   color: white;
 }
 
-.top-bar-text .a {
+.top-bar-text a {
   margin-right: 10px;
   color: white !important;
+  transition: transform 0.2s ease-in-out; /* Smooth animation */
+  display: inline-block; /* Needed for transform to work properly */
+}
 
+.top-bar-text a:hover {
+  transform: scale(1.1); /* Slightly increase size */
 }
 
 .top-bar .top-bar-text,
