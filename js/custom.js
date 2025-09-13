@@ -736,3 +736,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+(function () {
+    const overlay = document.getElementById('contactModalOverlay');
+    const modal = document.getElementById('contactModal');
+    const closeBtn = document.getElementById('contactModalClose');
+    let lastFocused;
+
+    function openModal() {
+      lastFocused = document.activeElement;
+      overlay.classList.add('is-open');
+      document.body.classList.add('modal-open');
+      overlay.setAttribute('aria-hidden', 'false');
+      // move focus into the modal for accessibility
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      overlay.classList.remove('is-open');
+      document.body.classList.remove('modal-open');
+      overlay.setAttribute('aria-hidden', 'true');
+      if (lastFocused && typeof lastFocused.focus === 'function') {
+        lastFocused.focus();
+      }
+    }
+
+    // Close handlers
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', (e) => {
+      // close if they click the dark backdrop, not inside the dialog
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+
+    // Open on page load
+    window.addEventListener('load', openModal);
+  })();

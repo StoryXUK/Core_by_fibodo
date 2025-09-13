@@ -11954,3 +11954,77 @@ body:has(#search.open):before {
     display: none;
   }
 }
+
+
+/* Prevent body scroll when modal is open */
+  body.modal-open {
+    overflow: hidden;
+  }
+
+  /* Overlay */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55); /* slightly darker page behind the modal */
+    display: none;                /* hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  .modal-overlay.is-open {
+    display: flex;
+  }
+
+  /* Modal (80% width & height of viewport) */
+  .modal {
+    width: 80vw;
+    height: 80vh;
+    background: #ffffff;
+    color: #111;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden; /* keep header fixed and content scrollable if you add a header */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Scrollable content area */
+  .modal__content {
+    overflow: auto;
+    padding: 32px;
+    height: 100%;
+  }
+
+  /* Close button (top-right corner) */
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+  }
+  .modal-close:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+  }
+
+  /* Optional: dark theme support for your existing .bg-dark box inside */
+  .modal .bg-dark {
+    background: #111;
+    color: #f8f8f8;
+    border-radius: 12px;
+    padding: 24px;
+  }
+
+  /* Make it comfy on very small screens */
+  @media (max-width: 600px) {
+    .modal {
+      width: 94vw;
+      height: 90vh;
+    }
+  }
