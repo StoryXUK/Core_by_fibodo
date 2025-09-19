@@ -140,6 +140,21 @@ h6 a,
   color: inherit;
 }
 
+.bg-yellow h1,
+.bg-yellow h2,
+.bg-yellow h3,
+.bg-yellow h4,
+.bg-yellow h5,
+.bg-yellow h6,
+.bg-yellow .h1,
+.bg-yellow .h2,
+.bg-yellow .h3,
+.bg-yellow .h4,
+.bg-yellow .h5,
+.bg-yellow .h6 {
+  color: #ffffff; /* keep text white for contrast */
+}
+
 .bg-black h1,
 .bg-black h2,
 .bg-black h3,
@@ -171,9 +186,13 @@ h6 a,
 }
 
 .bg-black p,
-.bg-dark p {
+.bg-dark p,
+.bg-yellow p {
   color: #c2c2c2;
 }
+
+
+
 
 iframe {
   width: 100%;
@@ -696,6 +715,10 @@ figure.caption.alignright {
 
 .bg-black {
   background-color: #000000 !important;
+}
+
+.bg-yellow {
+  background-color: #ff914d !important;
 }
 
 /* Page section margin padding */
@@ -3372,6 +3395,10 @@ form.fullborder .form-control:focus {
   color: #c2c2c2;
 }
 
+.bg-yellow .icon-list-items .icon-list-item .list-text {
+  color: #c2c2c2;
+}
+
 /*****************************
   Marquee style
 *****************************/
@@ -4182,6 +4209,40 @@ form.fullborder .form-control:focus {
   background-color: #ffffff;
   color: #0d1615;
 }
+
+.pricing-box.bg-yellow .pricing-header .title {
+  color: #ffffff;
+}
+
+.pricing-box.bg-yellow .pricing-header .subheading {
+  color: #ffffff;
+}
+
+.pricing-box.bg-yellow .pricing-price .price-currency {
+  color: #ffffff;
+}
+
+.pricing-box.bg-yellow .pricing-price .price {
+  color: #ffffff;
+}
+
+.pricing-box.bg-yellow .pricing-price .after-price .typo-excluded {
+  color: #ffffff;
+}
+
+.pricing-box.bg-yellow .pricing-content .package-desc {
+  color: #ffffff;
+}
+
+.pricing-box.bg-yellow .pricing-content .package-list li {
+  color: #ffffff;
+}
+
+.pricing-box.bg-yellow .pricing-footer .btn:hover {
+  background-color: #ffffff;
+  color: #0d1615;
+}
+
 
 .pricing-tabs-wrapper {
   border: 1px solid #e8e8e8;
@@ -12029,3 +12090,10 @@ body:has(#search.open):before {
       height: 90vh;
     }
   }
+
+
+  .crossed {
+  text-decoration: line-through;
+  /* text-decoration-color: red;  */
+  text-decoration-thickness: 2px; /* makes it bolder */
+}
