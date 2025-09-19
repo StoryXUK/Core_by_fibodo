@@ -2821,11 +2821,11 @@ section:has(.rounded-section) {
 }
 
 .switch-content-tabs .radio-switch {
-  background-color: transparent;
-  border: 1px solid #0d1615;
+  background-color: #ff914d; /* dark background */
+  border: 1px solid #ffffff;
   border-radius: 7px;
-  padding: 7px 7px 7px 7px;
-  margin: 0px 0px 0px 0px;
+  padding: 7px;
+  margin: 0;
 }
 
 .switch-content-tabs .radio-switch .radio-switch-item {
@@ -2834,11 +2834,12 @@ section:has(.rounded-section) {
 }
 
 .switch-content-tabs .radio-switch .radio-switch-item .nav-link {
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   position: relative;
-  color: #0d1615;
+  color: #ffffff; /* white text */
   z-index: 2;
 }
+
 
 
 /* Tablet only (769–1024px) */
@@ -2867,11 +2868,11 @@ section:has(.rounded-section) {
 
 
 .switch-content-tabs .radio-switch .radio-switch-item .nav-link:hover {
-  color: #0d1615;
+  color: #ff914d;
 }
 
 .switch-content-tabs .radio-switch .radio-switch-item .nav-link:focus {
-  color: #0d1615;
+  color: #ff914d;
 }
 
 .switch-content-tabs .radio-switch .radio-switch-item .nav-link:before {
@@ -2882,7 +2883,7 @@ section:has(.rounded-section) {
   top: 0px;
   left: auto;
   right: 0;
-  background-color: #0d1615;
+  background-color: #ff914d;
   border-radius: 7px;
   transition: all 0.3s ease-in-out;
   z-index: -1;
@@ -2911,11 +2912,11 @@ section:has(.rounded-section) {
 }
 
 .bg-dark .nav-tabs.radio-switch {
-  background-color: #ffffff;
+  background-color: #121C1B
 }
 
 .bg-dark .nav-tabs.radio-switch .nav-item .nav-link {
-  color: #000000;
+  color: #ffffff;
 }
 
 .bg-dark .pricing-box.bg-dark {
