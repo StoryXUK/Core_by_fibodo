@@ -2010,8 +2010,8 @@ section:has(.rounded-section) {
 }
 
 .btn:hover {
-  background-color: #0d1615;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #ff914d;
 }
 
 .btn:focus {
@@ -12097,3 +12097,42 @@ body:has(#search.open):before {
   /* text-decoration-color: red;  */
   text-decoration-thickness: 2px; /* makes it bolder */
 }
+
+
+
+/* Dropdown Banner Styling */
+.dropdown-banner {
+  display: block;
+  background: #f5f5f5;          /* light grey background */
+  padding: 12px 16px;
+  margin: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  text-decoration: none;       
+  color: #333;                 
+  transition: background 0.3s, transform 0.2s;
+}
+
+.dropdown-banner strong {
+  color: #0d1615;               /* Fibodo dark shade */
+}
+
+.dropdown-banner span {
+  color: #e3b505;               /* Fibodo yellow accent */
+  font-weight: bold;
+}
+
+.dropdown-banner:hover {
+  background: #e3b505;          /* yellow hover background */
+  color: #0d1615;               /* dark text on hover */
+  transform: translateY(-2px);  /* subtle lift effect */
+}
+
+.dropdown-banner:hover strong,
+.dropdown-banner:hover span {
+  color: #0d1615;               /* unify text color on hover */
+}
+
