@@ -9095,6 +9095,13 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
   font-size: 70px;
 }
 
+.inner-header .sub-title-features {
+  text-transform: capitalize;
+  color: #ffffff;
+  margin-bottom: 0px;
+  font-size: 50px;
+}
+
 .inner-header:before {
   position: absolute;
   content: "";
@@ -9168,6 +9175,10 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 
   .banner.banner-01 .banner-content .title {
     font-size: 60px;
+  }
+
+  .banner.banner-01 .banner-content .sub-title-features {
+    font-size: 40px;
   }
 
   .banner.banner-01 .banner-content .banner-info {
@@ -12136,3 +12147,7 @@ body:has(#search.open):before {
   color: #0d1615;               /* unify text color on hover */
 }
 
+
+.features-para {
+  font-size: 22px;
+}
