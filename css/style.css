@@ -152,7 +152,8 @@ h6 a,
 .bg-yellow .h4,
 .bg-yellow .h5,
 .bg-yellow .h6 {
-  color: #ffffff; /* keep text white for contrast */
+  color: #ffffff;
+  /* keep text white for contrast */
 }
 
 .bg-black h1,
@@ -472,7 +473,7 @@ h6 {
   padding: 7px;
   margin-right: 20px;
   margin-top: 8px;
-  background-color:  #ff914d;
+  background-color: #ff914d;
   color: #ffffff;
 }
 
@@ -764,7 +765,8 @@ figure.caption.alignright {
 
 @media (max-width: 768px) {
   .space-small-pl {
-  padding: 0 0 5px 5px;}
+    padding: 0 0 5px 5px;
+  }
 }
 
 .padding-start {
@@ -958,7 +960,7 @@ section:has(.rounded-section) {
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%; 
+  height: 100%;
 }
 
 /* Background overlay */
@@ -2844,7 +2846,8 @@ section:has(.rounded-section) {
 }
 
 .switch-content-tabs .radio-switch {
-  background-color: #ff914d; /* dark background */
+  background-color: #ff914d;
+  /* dark background */
   border: 1px solid #ffffff;
   border-radius: 7px;
   padding: 7px;
@@ -2859,7 +2862,8 @@ section:has(.rounded-section) {
 .switch-content-tabs .radio-switch .radio-switch-item .nav-link {
   padding: 10px 20px;
   position: relative;
-  color: #ffffff; /* white text */
+  color: #ffffff;
+  /* white text */
   z-index: 2;
 }
 
@@ -3250,8 +3254,10 @@ form.fullborder .form-control:focus {
 .infobox.infobox-style-02 {
   display: flex;
   flex-direction: column;
-  align-items: center;      /* Centers horizontally */
-  text-align: center;       /* Ensures text is centered */
+  align-items: center;
+  /* Centers horizontally */
+  text-align: center;
+  /* Ensures text is centered */
 }
 
 .infobox.infobox-style-02 .infobox-icon {
@@ -3260,10 +3266,14 @@ form.fullborder .form-control:focus {
   margin-bottom: 0px;
   background-color: #eeeeee;
   display: flex;
-  justify-content: center;  /* Centers icon horizontally */
-  align-items: center;      /* Centers icon vertically */
-  width: 50px;              /* Optional fixed size for icon area */
-  height: 50px;             /* Optional fixed size for icon area */
+  justify-content: center;
+  /* Centers icon horizontally */
+  align-items: center;
+  /* Centers icon vertically */
+  width: 50px;
+  /* Optional fixed size for icon area */
+  height: 50px;
+  /* Optional fixed size for icon area */
 }
 
 .infobox.infobox-style-02 .infobox-content h5 {
@@ -4032,6 +4042,10 @@ form.fullborder .form-control:focus {
   padding: 50px;
   border-radius: 20px;
   position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000;
+
 }
 
 .pricing-box .pricing-ribbon {
@@ -7736,9 +7750,11 @@ form.fullborder .form-control:focus {
 
 
 .header .menu-btn2 a {
-  display: inline-block;        /* makes the anchor fill nicely */
+  display: inline-block;
+  /* makes the anchor fill nicely */
   color: white;
-  padding: 10px 20px;           /* adjust spacing as needed */
+  padding: 10px 20px;
+  /* adjust spacing as needed */
   text-decoration: none;
 }
 
@@ -7748,7 +7764,8 @@ form.fullborder .form-control:focus {
 }
 
 .header .menu-btn2:hover a {
-  color: black;                 /* text changes when parent is hovered */
+  color: black;
+  /* text changes when parent is hovered */
 }
 
 .header .menu-btn3 {
@@ -7760,8 +7777,10 @@ form.fullborder .form-control:focus {
   margin-left: 15px;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;  /* start white */
-  color: black !important;    /* text black */
+  background-color: #ffffff;
+  /* start white */
+  color: black !important;
+  /* text black */
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   border: 1px solid #000000;
@@ -7775,18 +7794,21 @@ form.fullborder .form-control:focus {
 
 .header .menu-btn3 a {
   display: inline-block;
-  color: black;              /* text black */
+  color: black;
+  /* text black */
   padding: 10px 20px;
   text-decoration: none;
 }
 
 .header .menu-btn3:hover {
-  background-color: #000000; /* invert background */
+  background-color: #000000;
+  /* invert background */
   border: 1px solid #000;
 }
 
 .header .menu-btn3:hover a {
-  color: white;              /* text turns white */
+  color: white;
+  /* text turns white */
 }
 
 
@@ -8896,7 +8918,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 
 .banner.banner-01 .banner-content .title.title-main {
   margin: auto;
- 
+
 }
 
 .banner.banner-01 .banner-content .banner-info {
@@ -10682,11 +10704,15 @@ body:has(#search.open):before {
 *************************/
 
 .blog-post {
-  border: 1px solid #ddd; /* Light gray border */
-  border-radius: 1px;     /* Rounded corners */
- 
-  background-color: #fff; /* White background */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border: 1px solid #ddd;
+  /* Light gray border */
+  border-radius: 1px;
+  /* Rounded corners */
+
+  background-color: #fff;
+  /* White background */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -11025,7 +11051,7 @@ body:has(#search.open):before {
 .blog-post.blog-style-03 .blog-post-info {
   margin-top: 20px;
   padding: 15px;
-  
+
 }
 
 .blog-post.blog-style-03 .blog-post-info .post-title {
@@ -11911,7 +11937,8 @@ body:has(#search.open):before {
 }
 
 .top-bar .top-bar-text:hover i {
-  transform: translateX(5px); /* move arrow to the right */
+  transform: translateX(5px);
+  /* move arrow to the right */
 }
 
 @media (max-width: 992px) {
@@ -11920,12 +11947,18 @@ body:has(#search.open):before {
   }
 }
 
-.black {color: #000;}
+.black {
+  color: #000;
+}
 
 
 
 
-.service-single[hidden] { display: none !important; } /* hide inactive panels */
+.service-single[hidden] {
+  display: none !important;
+}
+
+/* hide inactive panels */
 
 
 .product-description {
@@ -11954,10 +11987,14 @@ body:has(#search.open):before {
 /* Preloader full screen */
 #preloader {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: #fff; /* white background */
-  color: #000;      /* black text */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  /* white background */
+  color: #000;
+  /* black text */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11985,6 +12022,7 @@ body:has(#search.open):before {
 #preloader h1:nth-child(1) {
   animation-delay: 0.2s;
 }
+
 #preloader h1:nth-child(2) {
   animation-delay: 0.8s;
 }
@@ -12010,12 +12048,12 @@ body:has(#search.open):before {
 
 
 
- .banner-info {
+.banner-info {
   margin: auto;
   max-width: 50vw;
- }
+}
 
- @media (max-width: 991px) {
+@media (max-width: 991px) {
   .banner-info {
     max-width: 90vw;
   }
@@ -12030,83 +12068,89 @@ body:has(#search.open):before {
 
 
 /* Prevent body scroll when modal is open */
-  body.modal-open {
-    overflow: hidden;
-  }
+body.modal-open {
+  overflow: hidden;
+}
 
-  /* Overlay */
-  .modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.55); /* slightly darker page behind the modal */
-    display: none;                /* hidden by default */
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-  }
-  .modal-overlay.is-open {
-    display: flex;
-  }
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  /* slightly darker page behind the modal */
+  display: none;
+  /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
 
-  /* Modal (80% width & height of viewport) */
+.modal-overlay.is-open {
+  display: flex;
+}
+
+/* Modal (80% width & height of viewport) */
+.modal {
+  width: 80vw;
+  height: 80vh;
+  background: #ffffff;
+  color: #111;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  /* keep header fixed and content scrollable if you add a header */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollable content area */
+.modal__content {
+  overflow: auto;
+  padding: 32px;
+  height: 100%;
+}
+
+/* Close button (top-right corner) */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+}
+
+.modal-close:focus {
+  outline: transparent;
+  outline-offset: 2px;
+}
+
+/* Optional: dark theme support for your existing .bg-dark box inside */
+.modal .bg-dark {
+  background: #111;
+  color: #f8f8f8;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* Make it comfy on very small screens */
+@media (max-width: 600px) {
   .modal {
-    width: 80vw;
-    height: 80vh;
-    background: #ffffff;
-    color: #111;
-    border-radius: 16px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    position: relative;
-    overflow: hidden; /* keep header fixed and content scrollable if you add a header */
-    display: flex;
-    flex-direction: column;
+    width: 94vw;
+    height: 90vh;
   }
-
-  /* Scrollable content area */
-  .modal__content {
-    overflow: auto;
-    padding: 32px;
-    height: 100%;
-  }
-
-  /* Close button (top-right corner) */
-  .modal-close {
-    position: absolute;
-    top: 10px;
-    right: 12px;
-    background: transparent;
-    border: none;
-    font-size: 28px;
-    line-height: 1;
-    cursor: pointer;
-    color: #333;
-  }
-  .modal-close:focus {
-    outline: transparent;
-    outline-offset: 2px;
-  }
-
-  /* Optional: dark theme support for your existing .bg-dark box inside */
-  .modal .bg-dark {
-    background: #111;
-    color: #f8f8f8;
-    border-radius: 12px;
-    padding: 24px;
-  }
-
-  /* Make it comfy on very small screens */
-  @media (max-width: 600px) {
-    .modal {
-      width: 94vw;
-      height: 90vh;
-    }
-  }
+}
 
 
-  .crossed {
+.crossed {
   text-decoration: line-through;
   /* text-decoration-color: red;  */
-  text-decoration-thickness: 2px; /* makes it bolder */
+  text-decoration-thickness: 2px;
+  /* makes it bolder */
 }
 
 
@@ -12114,37 +12158,44 @@ body:has(#search.open):before {
 /* Dropdown Banner Styling */
 .dropdown-banner {
   display: block;
-  background: #f5f5f5;          /* light grey background */
+  background: #f5f5f5;
+  /* light grey background */
   padding: 12px 16px;
   margin: 10px;
   border-radius: 8px;
   text-align: center;
   font-size: 14px;
   line-height: 1.4;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-  text-decoration: none;       
-  color: #333;                 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: #333;
   transition: background 0.3s, transform 0.2s;
 }
 
 .dropdown-banner strong {
-  color: #0d1615;               /* Fibodo dark shade */
+  color: #0d1615;
+  /* Fibodo dark shade */
 }
 
 .dropdown-banner span {
-  color: #e3b505;               /* Fibodo yellow accent */
+  color: #e3b505;
+  /* Fibodo yellow accent */
   font-weight: bold;
 }
 
 .dropdown-banner:hover {
-  background: #e3b505;          /* yellow hover background */
-  color: #0d1615;               /* dark text on hover */
-  transform: translateY(-2px);  /* subtle lift effect */
+  background: #e3b505;
+  /* yellow hover background */
+  color: #0d1615;
+  /* dark text on hover */
+  transform: translateY(-2px);
+  /* subtle lift effect */
 }
 
 .dropdown-banner:hover strong,
 .dropdown-banner:hover span {
-  color: #0d1615;               /* unify text color on hover */
+  color: #0d1615;
+  /* unify text color on hover */
 }
 
 
