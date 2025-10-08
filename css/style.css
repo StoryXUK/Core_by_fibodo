@@ -3,7 +3,7 @@
   \*******************************************************************************************************************/
 /*
 
-Template: Fibodo
+Template: fibodo
 Version: 1.0
 Author: fibodo
 Design and Developed by: fibodo.com
@@ -3229,8 +3229,8 @@ form.fullborder .form-control:focus {
   justify-content: space-between;
 }
 
-.infobox .infobox-info .infobox-title a {
-  text-align: center;
+.infobox .infobox-info .infobox-title {
+  text-align: left;
   font-size: 18px;
   line-height: 16px;
   font-weight: 300;
@@ -3244,40 +3244,43 @@ form.fullborder .form-control:focus {
 }
 
 .infobox .infobox-info .infobox-link svg {
-  vertical-align: middle;
+  /* vertical-align: middle; */
+  color: red;
 }
 
 .infobox .infobox-content .infobox-description {
   line-height: 30px;
+  text-align: left;
+  padding-left: 15px;
 }
 
 .infobox.infobox-style-02 {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   /* Centers horizontally */
-  text-align: center;
+  text-align: left;
   /* Ensures text is centered */
+  border-radius: 10px;
 }
 
 .infobox.infobox-style-02 .infobox-icon {
   /* padding: 15px; */
   border-radius: 10px;
-  margin-bottom: 0px;
-  background-color: #eeeeee;
-  display: flex;
-  justify-content: center;
-  /* Centers icon horizontally */
-  align-items: center;
-  /* Centers icon vertically */
-  width: 50px;
+  margin-bottom: 10px;
+  
+  
+  
+  width: 30px;
   /* Optional fixed size for icon area */
-  height: 50px;
+  height: 30px;
   /* Optional fixed size for icon area */
+  color: red;
 }
 
 .infobox.infobox-style-02 .infobox-content h5 {
-  margin: 0;
+  text-align: left;
+  padding-left: 15px;
 }
 
 
@@ -3293,13 +3296,12 @@ form.fullborder .form-control:focus {
 }
 
 .infobox.infobox-style-02 .infobox-icon {
-  text-align: center;
+  text-align: left;
   display: inline-block;
-  margin: auto;
+  
   padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  background-color: #eeeeee;
+  
+  
 }
 
 .infobox.infobox-style-02 .infobox-icon i {
@@ -3318,11 +3320,12 @@ form.fullborder .form-control:focus {
   font-weight: bold;
   display: inline-flex;
   gap: 5px;
-  align-items: center;
+  align-items: left;
   text-transform: uppercase;
   color: #0d1615;
   border-bottom: 1px solid #0d1615;
-  margin-top: 20px;
+  margin-left: 15px;
+  margin-bottom: 15px;
 }
 
 .infobox.infobox-style-02 .infobox-content .infobox-link:hover {
@@ -11902,7 +11905,7 @@ body:has(#search.open):before {
 }
 
 .top-bar {
-  background-color: #ff914d;
+  background-color: #0D1615;
   /* mid grey */
   font-size: 20px;
   font-weight: 400;
@@ -11918,7 +11921,7 @@ body:has(#search.open):before {
 }
 
 .top-bar-text .a {
-  margin-right: 10px;
+  margin: auto;
   color: white !important;
 
 }
@@ -12174,12 +12177,12 @@ body.modal-open {
 
 .dropdown-banner strong {
   color: #0d1615;
-  /* Fibodo dark shade */
+  /* fibodo dark shade */
 }
 
 .dropdown-banner span {
   color: #e3b505;
-  /* Fibodo yellow accent */
+  /* fibodo yellow accent */
   font-weight: bold;
 }
 

@@ -1,6 +1,6 @@
 /*
 
-Template: Fibodo
+Template: fibodo
 Author: fibodo
 Design and Developed by: fibodo.com
 
