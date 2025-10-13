@@ -10105,13 +10105,8 @@ body:has(#search.open):before {
   top: 110px;
 }
 
-.site-content{margin-inline:auto; padding-inline:16px;}
-@media (min-width: 576px) { .site-content { max-width: 540px; } }
-@media (min-width: 768px) { .site-content { max-width: 720px; } }
-@media (min-width: 992px) { .site-content { max-width: 960px; } }
-@media (min-width: 1200px) { .site-content { max-width: 1140px; } }
-@media (min-width: 1400px) { .site-content { max-width: 1320px; } }
-@media (min-width: 1600px) { .site-content { max-width: 1440px; } }
+.site-content{margin-inline:auto;}
+
 @media (min-width: 1800px) { .site-content { max-width: 1560px; } }
 
 /*=========== Ineer page ===========*/
