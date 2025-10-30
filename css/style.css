@@ -5786,7 +5786,7 @@ form.fullborder .form-control:focus {
 .service-item .service-content .service-title {
   margin-bottom: 15px;
   color: #000000;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
