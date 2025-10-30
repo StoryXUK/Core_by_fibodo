@@ -14,11 +14,11 @@ pages_data = {
         "main_p3": "The fibodo Vouchers Module brings everything together in one place, helping you create and manage digital vouchers that connect directly to your products, memberships, and client accounts.",
         "features_title": "Core Features",
         "features": [
-            ("1️⃣ Easy Voucher Creation", "Design and issue vouchers in seconds — fixed value, percentage discount, or custom offers."),
-            ("2️⃣ Seamless Redemption", "Clients can redeem vouchers instantly at checkout or via their app — no codes or admin needed."),
-            ("3️⃣ Smart Tracking", "See exactly which offers are performing best, and where your redemptions are coming from."),
-            ("4️⃣ Automated Expiry & Limits", "Set rules for expiry dates, redemption limits, or single-use access — automatically enforced."),
-            ("5️⃣ Custom Branding", "Add your logo, colours, and tone so every offer reflects your brand perfectly.")
+            ("Easy Voucher Creation", "Design and issue vouchers in seconds — fixed value, percentage discount, or custom offers."),
+            ("Seamless Redemption", "Clients can redeem vouchers instantly at checkout or via their app — no codes or admin needed."),
+            ("Smart Tracking", "See exactly which offers are performing best, and where your redemptions are coming from."),
+            ("Automated Expiry & Limits", "Set rules for expiry dates, redemption limits, or single-use access — automatically enforced."),
+            ("Custom Branding", "Add your logo, colours, and tone so every offer reflects your brand perfectly.")
         ],
         "sidebar_title": "Why It Matters",
         "sidebar_p1": "Vouchers aren't just discounts — they're conversation starters.",

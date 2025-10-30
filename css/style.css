@@ -8587,7 +8587,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 
   .header .navbar .dropdown-menu {
     margin: 0px;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 5px;
     min-width: 250px;
     border: none;
@@ -8618,8 +8618,9 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
   }
 
   .header .navbar .dropdown-menu.dropdown-menu-lg.megamenu {
-    padding: 25px 10px;
+    padding: 30px 40px;
     width: 100%;
+    min-width: 900px;
   }
 
   .header .navbar .dropdown:hover>.dropdown-menu {
@@ -12229,6 +12230,19 @@ body.modal-open {
   /* dark text on hover */
   transform: translateY(-2px);
   /* subtle lift effect */
+}
+
+/* Laptop screen optimization for megamenu */
+@media (min-width: 992px) and (max-width: 1366px) {
+  .header .navbar .dropdown-menu.dropdown-menu-lg.megamenu {
+    padding: 30px 30px;
+    min-width: 850px;
+  }
+  
+  .header .navbar .dropdown-menu.dropdown-menu-lg.megamenu .col-md-3 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .dropdown-banner:hover strong,
