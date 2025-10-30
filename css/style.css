@@ -6007,23 +6007,30 @@ form.fullborder .form-control:focus {
   bottom: 0;
   opacity: 0;
   z-index: 2;
-  padding: 40px;
+  padding: 30px;
   visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: linear-gradient(to right, #ffde59, #ff914d);
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .service-item.service-style-02 .service-content .service-title {
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 42px;
+  line-height: 28px;
   margin: 0;
   color: #ffffff;
-  margin-top: 40px;
+  margin-top: 20px;
   transition: all 0.4s ease-in-out;
+}
+
+.service-item.service-style-02 .service-content p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 20px;
 }
 
 .service-item.service-style-02 .service-content .service-action .circle-btn {
