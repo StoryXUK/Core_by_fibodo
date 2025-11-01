@@ -12265,3 +12265,15 @@ body.modal-open {
   height: auto;
   object-fit: contain;
 }
+
+.max-width80 {
+  max-width: 80vw;
+  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .max-width80 {
+    max-width: 90vw;
+  }
+}
