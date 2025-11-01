@@ -7654,7 +7654,7 @@ form.fullborder .form-control:focus {
 
 .header .navbar-brand {
   padding: 20px 0px;
-  margin-right: 30px;
+  margin-right: 100px;
   color: #ffffff;
   min-width: 220px;
   flex: 0 0 220px;
@@ -7664,7 +7664,7 @@ form.fullborder .form-control:focus {
 }
 
 .header .navbar-brand img {
-  height: 50px;
+  height: 65px;
 }
 
 .header .navbar-brand img.sticky {
