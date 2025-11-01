@@ -6983,7 +6983,6 @@ form.fullborder .form-control:focus {
   line-height: 36px;
   font-style: italic;
   font-weight: normal;
-  text-transform: capitalize;
   color: #0d1615;
   margin-bottom: 30px;
 }
