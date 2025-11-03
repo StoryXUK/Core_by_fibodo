@@ -12277,3 +12277,15 @@ body.modal-open {
     max-width: 90vw;
   }
 }
+
+/* Fixed height for card titles to maintain consistent spacing */
+.title-fixed-height {
+  min-height: 3.5em;
+  line-height: 1.4;
+}
+
+@media (max-width: 767px) {
+  .title-fixed-height {
+    min-height: auto;
+  }
+}
