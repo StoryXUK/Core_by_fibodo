@@ -12298,7 +12298,7 @@ body.modal-open {
 
 /* Left-aligned max-width classes */
 .max-width60-left {
-  max-width: 60%;
+  max-width: 70%;
   margin-left: 0;
   margin-right: auto;
   text-align: left;
