@@ -12295,3 +12295,17 @@ body.modal-open {
   font-size: 1.5em;
   padding: 0.5em 1em;
 }
+
+/* Left-aligned max-width classes */
+.max-width60-left {
+  max-width: 60%;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+@media (max-width: 991px) {
+  .max-width60-left {
+    max-width: 90%;
+  }
+}
