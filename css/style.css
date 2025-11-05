@@ -12013,14 +12013,14 @@ body:has(#search.open):before {
 
 
 .max-width60 {
-  max-width: 60vw;
+  max-width: 60%;
   margin: auto;
   text-align: center;
 }
 
 @media (max-width: 991px) {
   .max-width60 {
-    max-width: 90vw;
+    max-width: 90%;
   }
 }
 
@@ -12267,26 +12267,14 @@ body.modal-open {
 }
 
 .max-width80 {
-  max-width: 80vw;
+  max-width: 80%;
   margin: auto;
   text-align: center;
 }
 
 @media (max-width: 991px) {
   .max-width80 {
-    max-width: 90vw;
-  }
-}
-
-.max-width80 {
-  max-width: 80vw;
-  margin: auto;
-  text-align: center;
-}
-
-@media (max-width: 991px) {
-  .max-width80 {
-    max-width: 90vw;
+    max-width: 90%;
   }
 }
 
