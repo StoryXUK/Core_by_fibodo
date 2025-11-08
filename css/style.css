@@ -12309,3 +12309,8 @@ body.modal-open {
     max-width: 90%;
   }
 }
+/* Ensure button displays as block element below paragraph */
+.section-title .btn-white-bg {
+  display: inline-block;
+  margin-top: 1.5rem;
+}
