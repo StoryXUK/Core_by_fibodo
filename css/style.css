@@ -11795,6 +11795,13 @@ body:has(#search.open):before {
   margin-bottom: 25px;
 }
 
+.widget-menu ul.product-links li a {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+
 .widget-menu ul li {
   margin-bottom: 10px;
 }
