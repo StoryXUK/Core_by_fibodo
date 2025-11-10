@@ -7761,12 +7761,12 @@ form.fullborder .form-control:focus {
 }
 
 .header .menu-btn2 {
-  width: 150px;
-  font-size: 18px;
+  width: 100px;
+  font-size: 14px;
   border-radius: 5px;
-  height: 65px;
+  height: 45px;
   display: flex;
-  margin-left: 15px;
+  margin-left: 10px;
   align-items: center;
   justify-content: center;
   background-color: #000000;
@@ -7788,7 +7788,7 @@ form.fullborder .form-control:focus {
   display: inline-block;
   /* makes the anchor fill nicely */
   color: white;
-  padding: 10px 20px;
+  padding: 8px 15px;
   /* adjust spacing as needed */
   text-decoration: none;
 }
@@ -7804,12 +7804,12 @@ form.fullborder .form-control:focus {
 }
 
 .header .menu-btn3 {
-  width: 150px;
-  font-size: 18px;
+  width: 100px;
+  font-size: 14px;
   border-radius: 5px;
-  height: 65px;
+  height: 45px;
   display: flex;
-  margin-left: 15px;
+  margin-left: 10px;
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
@@ -7831,7 +7831,7 @@ form.fullborder .form-control:focus {
   display: inline-block;
   color: black;
   /* text black */
-  padding: 10px 20px;
+  padding: 8px 15px;
   text-decoration: none;
 }
 
