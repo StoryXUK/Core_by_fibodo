@@ -12246,7 +12246,8 @@ body.modal-open {
 @media (min-width: 992px) and (max-width: 1366px) {
   .header .navbar .dropdown-menu.dropdown-menu-lg.megamenu {
     padding: 30px 30px;
-    min-width: 850px;
+    width: 100%;
+    min-width: 900px;
   }
   
   .header .navbar .dropdown-menu.dropdown-menu-lg.megamenu .col-md-3 {
