@@ -11976,14 +11976,19 @@ body:has(#search.open):before {
 .top-bar .top-bar-text {
   color: white !important;
   font-weight: 200;
+  font-size: 0.9rem;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 .top-bar .top-bar-text i {
   transition: transform 0.3s ease;
+}
+
+.top-bar .top-bar-text:hover {
+  font-weight: 700;
 }
 
 .top-bar .top-bar-text:hover i {
@@ -12142,7 +12147,8 @@ body.modal-open {
 /* Modal (80% width & height of viewport) */
 .modal {
   width: 80vw;
-  height: 80vh;
+  max-height: 85vh;
+  height: auto;
   background: #ffffff;
   color: #111;
   border-radius: 16px;
@@ -12157,7 +12163,7 @@ body.modal-open {
 /* Scrollable content area */
 .modal__content {
   overflow: auto;
-  padding: 32px;
+  padding: 20px;
   height: 100%;
 }
 
