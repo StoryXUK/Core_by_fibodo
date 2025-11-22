@@ -12380,3 +12380,13 @@ body.modal-open {
     padding: 40px 0;
   }
 }
+
+
+.core-title {
+  margin-top: 50px;
+  padding-right: 100px;
+  flex-shrink: 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+}
