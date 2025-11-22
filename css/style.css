@@ -12385,8 +12385,9 @@ body.modal-open {
 .core-title {
   margin-top: 50px;
   padding-right: 100px;
+  margin-right: 100px;
   flex-shrink: 0;
-  font-size: 18px;
+  font-size: 30px;
   line-height: 30px;
   font-weight: 500;
 }
