@@ -8988,10 +8988,12 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 
 .slider-01 .swiper-slide {
   height: 50vh;
+  min-height: 600px;
   position: relative;
   z-index: 2;
   border-radius: 16px;
   overflow: hidden;
+  padding: 80px 0;
 }
 
 .slider-01 .swiper-slide:before {
@@ -12348,4 +12350,33 @@ body.modal-open {
 .slider-01 #main-slider {
   border-radius: 0 0 16px 16px;
   overflow: hidden;
+}
+
+/* Responsive adjustments for carousel slides */
+@media (min-width: 992px) and (max-width: 1366px) {
+  .slider-01 .swiper-slide {
+    min-height: 650px;
+    padding: 100px 0;
+  }
+}
+
+@media (min-width: 1367px) {
+  .slider-01 .swiper-slide {
+    min-height: 700px;
+    padding: 120px 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .slider-01 .swiper-slide {
+    min-height: 500px;
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider-01 .swiper-slide {
+    min-height: 450px;
+    padding: 40px 0;
+  }
 }
