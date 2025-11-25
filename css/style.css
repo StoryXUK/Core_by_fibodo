@@ -235,20 +235,20 @@ h6 {
 }
 
 *::-moz-selection {
-  background: linear-gradient(to right, #ffde59, #ff914d);
-  color: #ffffff;
+  background: #ffde59;
+  color: #0d1615;
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background: linear-gradient(to right, #ffde59, #ff914d);
-  color: #ffffff;
+  background: #ffde59;
+  color: #0d1615;
   text-shadow: none;
 }
 
 ::selection {
-  background: linear-gradient(to right, #ffde59, #ff914d);
-  color: #ffffff;
+  background: #ffde59;
+  color: #0d1615;
   text-shadow: none;
 }
 
@@ -4161,6 +4161,10 @@ form.fullborder .form-control:focus {
   line-height: normal;
   letter-spacing: normal;
   text-transform: none;
+}
+
+.pricing-box .pricing-content {
+  min-height: 150px;
 }
 
 .pricing-box .pricing-content .package-desc {
