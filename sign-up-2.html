@@ -62,7 +62,7 @@
                                     <form class="contact-form fullborder" id="registrationForm" method="POST" action="process-signup.php">
                                         <div class="row">
                                             
-                                            </div>
+                                            
                                             <div class="col-md-6">
                                                 <input type="text" class="form-control" name="first_name"
                                                     placeholder="First Name*" aria-label="First Name"
@@ -73,11 +73,11 @@
                                                     placeholder="Last Name*" aria-label="Last Name"
                                                     required>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
                                                 <input type="email" class="form-control" name="email" placeholder="Email*"
                                                     aria-label="Email" required>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
                                                 <input type="tel" class="form-control" name="phone" placeholder="Phone*"
                                                     aria-label="Phone" required>
                                             </div>
@@ -148,23 +148,36 @@
                     e.preventDefault();
                     
                     const formData = new FormData(this);
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Submitting...';
                     
                     fetch('process-signup.php', {
                         method: 'POST',
                         body: formData
                     })
-                    .then(response => response.json())
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
                     .then(data => {
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Join Us';
+                        
                         if (data.success) {
                             alert('Thank you!');
                             this.reset();
                         } else {
-                            alert('There was an error submitting your registration. Please try again.');
+                            alert('Error: ' + (data.message || 'There was an error submitting your registration. Please try again.'));
                         }
                     })
                     .catch(error => {
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Join Us';
                         console.error('Error:', error);
-                        alert('There was an error submitting your registration. Please try again.');
+                        alert('There was an error submitting your registration. Please check your internet connection and try again.');
                     });
                 });
             </script>
