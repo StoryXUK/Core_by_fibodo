@@ -30,6 +30,31 @@
 <body>
 
     <div id="page" class="main">
+        <!-- Thank You Modal -->
+        <div class="modal-overlay" id="thankYouModalOverlay" aria-hidden="true" style="display: none;">
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="thankYouModalTitle" id="thankYouModal">
+                <button class="modal-close" id="thankYouModalClose" aria-label="Close dialog" title="Close">×</button>
+                <div class="modal__content">
+                    <div class="content-wrapper">
+                        <section style="padding: 60px 30px;">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 text-center">
+                                        <div class="section-title">
+                                            <h2 class="title" id="thankYouModalTitle">All set.</h2>
+                                            <p class="lead mb-4">Thanks for signing up — we're putting your details into the system now.</p>
+                                            <p>We'll send your confirmation, access instructions, and next steps very shortly.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Thank You Modal End -->
+        
         <!-- Header -->
         <header id="navbar">
             <!-- Navigation will be loaded here -->
@@ -144,11 +169,51 @@
             <script src="js/custom.js"></script>
             <script src="js/loadNav.js"></script>
             <script>
+                // Modal functions
+                function showThankYouModal() {
+                    const overlay = document.getElementById('thankYouModalOverlay');
+                    const modal = document.getElementById('thankYouModal');
+                    overlay.style.display = 'block';
+                    overlay.setAttribute('aria-hidden', 'false');
+                    setTimeout(() => {
+                        overlay.classList.add('is-visible');
+                    }, 10);
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeThankYouModal() {
+                    const overlay = document.getElementById('thankYouModalOverlay');
+                    overlay.classList.remove('is-visible');
+                    setTimeout(() => {
+                        overlay.style.display = 'none';
+                        overlay.setAttribute('aria-hidden', 'true');
+                        document.body.style.overflow = '';
+                    }, 300);
+                }
+
                 // Check for success parameter in URL
                 window.addEventListener('DOMContentLoaded', function() {
                     const urlParams = new URLSearchParams(window.location.search);
+                    
+                    // Setup modal close button
+                    const closeBtn = document.getElementById('thankYouModalClose');
+                    const overlay = document.getElementById('thankYouModalOverlay');
+                    
+                    if (closeBtn) {
+                        closeBtn.addEventListener('click', closeThankYouModal);
+                    }
+                    
+                    if (overlay) {
+                        overlay.addEventListener('click', function(e) {
+                            if (e.target === overlay) {
+                                closeThankYouModal();
+                            }
+                        });
+                    }
+                    
+                    // Show modal on success
                     if (urlParams.get('success') === '1') {
-                        alert('Thank you!');
+                        showThankYouModal();
                         // Clean URL
                         window.history.replaceState({}, document.title, window.location.pathname);
                     } else if (urlParams.get('error') === '1') {
