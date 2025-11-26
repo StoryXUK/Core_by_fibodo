@@ -59,7 +59,7 @@
                                         <h3 class="title">Register For Our One Of Launch Offer</h3>
                                         
                                     </div>
-                                    <form class="contact-form fullborder" id="registrationForm" method="POST" action="process-signup.php">
+                                    <form class="contact-form fullborder" id="registrationForm" method="POST" action="process-signup.php" onsubmit="return true;">
                                         <div class="row">
                                             
                                             
@@ -144,41 +144,17 @@
             <script src="js/custom.js"></script>
             <script src="js/loadNav.js"></script>
             <script>
-                document.getElementById('registrationForm').addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    const formData = new FormData(this);
-                    const submitButton = this.querySelector('button[type="submit"]');
-                    submitButton.disabled = true;
-                    submitButton.textContent = 'Submitting...';
-                    
-                    fetch('process-signup.php', {
-                        method: 'POST',
-                        body: formData
-                    })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        submitButton.disabled = false;
-                        submitButton.textContent = 'Join Us';
-                        
-                        if (data.success) {
-                            alert('Thank you!');
-                            this.reset();
-                        } else {
-                            alert('Error: ' + (data.message || 'There was an error submitting your registration. Please try again.'));
-                        }
-                    })
-                    .catch(error => {
-                        submitButton.disabled = false;
-                        submitButton.textContent = 'Join Us';
-                        console.error('Error:', error);
-                        alert('There was an error submitting your registration. Please check your internet connection and try again.');
-                    });
+                // Check for success parameter in URL
+                window.addEventListener('DOMContentLoaded', function() {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    if (urlParams.get('success') === '1') {
+                        alert('Thank you!');
+                        // Clean URL
+                        window.history.replaceState({}, document.title, window.location.pathname);
+                    } else if (urlParams.get('error') === '1') {
+                        alert('There was an error submitting your registration. Please try again.');
+                        window.history.replaceState({}, document.title, window.location.pathname);
+                    }
                 });
             </script>
 </body>
