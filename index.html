@@ -52,6 +52,37 @@
 <body>
 
     <!--=================================
+    BFF Modal -->
+    <div class="modal-overlay" id="bffModalOverlay" aria-hidden="true" style="display: none;">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bffModalTitle" id="bffModal">
+        <button class="modal-close" id="bffModalClose" aria-label="Close dialog" title="Close">×</button>
+        <div class="modal__content">
+          <div class="content-wrapper">
+            <section class="space-ptb" id="registration-section">
+              <div class="container">
+                <div class="contact-box bg-dark">
+                  <div class="section-title">
+                    <span class="subtitle">Not a Black Friday Sale </span>
+                    <h3 class="title" id="bffModalTitle">Only one £600 Payment, Ever</h3>
+                    <p>Unlock the CORE Best Friends Forever Deal and get CORE Plus for life.
+                      No monthly fees. No renewals. No catch.
+                      Just your entire business on one platform — forever.</p>
+                    <p>Only 1,000 lifetime licences available.</p>
+                    <a target="_blank" href="https://web.fibodo.com/signup/information?app=bff"
+                      class="btn-white-bg animated fadeInUp" data-swiper-animation="fadeInUp" data-duration="2.5s"
+                      data-delay="0.25s">Join Us</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--=================================
+    BFF Modal End -->
+
+    <!--=================================
     cursor -->
     <div id="cursor">
         <div class="cursor__circle"></div>
@@ -898,11 +929,15 @@
 
 
                             </div>
-                            <h5>This is just a snapshot of who uses CORE today.<br>
-                                If you run sessions, classes, appointments or experiences of any
-                                kind, <a href="contact-us.html">get in
-                                    touch</a> — we'll help you explore how CORE can support your
-                                growth.</h5>
+                            <div class="row mt-4">
+                                <div class="col-lg-12">
+                                    <h5>This is just a snapshot of who uses CORE today.<br>
+                                        If you run sessions, classes, appointments or experiences of any
+                                        kind, <a href="contact-us.html">get in
+                                            touch</a> — we'll help you explore how CORE can support your
+                                        growth.</h5>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -1565,6 +1600,49 @@
                 alert('There was an error submitting your registration. Please try again.');
                 window.history.replaceState({}, document.title, window.location.pathname);
             }
+
+            // Auto-open BFF modal on page load
+            const modalOverlay = document.getElementById('bffModalOverlay');
+            const modalClose = document.getElementById('bffModalClose');
+            
+            // Show modal on page load after a short delay
+            if (modalOverlay) {
+                setTimeout(function() {
+                    modalOverlay.style.display = 'flex';
+                    modalOverlay.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                }, 500);
+            }
+            
+            // Close modal function
+            function closeModal() {
+                if (modalOverlay) {
+                    modalOverlay.style.display = 'none';
+                    modalOverlay.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                }
+            }
+            
+            // Close button click
+            if (modalClose) {
+                modalClose.addEventListener('click', closeModal);
+            }
+            
+            // Close on overlay click
+            if (modalOverlay) {
+                modalOverlay.addEventListener('click', function(e) {
+                    if (e.target === modalOverlay) {
+                        closeModal();
+                    }
+                });
+            }
+            
+            // Close on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modalOverlay && modalOverlay.style.display === 'flex') {
+                    closeModal();
+                }
+            });
         });
     </script>
 </body>
