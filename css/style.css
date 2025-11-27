@@ -12389,3 +12389,14 @@ body.modal-open {
 .core-title {
   
 }
+
+
+.font-18 {
+  font-size: 18px !important;
+  line-height: 28px !important;
+}
+
+.font-20 {
+  font-size: 20px !important;
+  line-height: 30px !important;
+}
