@@ -72,27 +72,36 @@
 
     <!--=================================
         Registration Form Section -->
-    <section class="space-ptb" id="registration-section">
-      <div class="container">
-            <div class="contact-box bg-dark">
-              <div class="section-title">
-                <span class="subtitle">Not a Black Friday Sale </span>
-                <h3 class="title">Only one £600 Payment, Ever 
-                </h3>
-                <p>Unlock the CORE Best Friends Forever Deal and get CORE Plus for life.
-                  No monthly fees. No renewals. No catch.
-                  Just your entire business on one platform — forever.</p>
-                <p>Only 1,000 lifetime licences available.</p>
-                <a target="_blank" href=“https://web.fibodo.com/signup/information?app=bff”
-                  class="btn-white-bg animated fadeInUp" data-swiper-animation="fadeInUp" data-duration="2.5s"
-                  data-delay="0.25s">Join Us</a>
-              </div>
-            </div>
-          </div>
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section>
+
     <!--=================================
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="bffModalOverlay" aria-hidden="false">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bffModalTitle" id="bffModal">
+        <button class="modal-close" id="bffModalClose" aria-label="Close dialog" title="Close">×</button>
+        <div class="modal__content">
+          <div class="content-wrapper">
+            <section class="space-ptb" id="registration-section">
+              <div class="container">
+                <div class="contact-box bg-dark">
+                  <div class="section-title">
+                    <span class="subtitle">Not a Black Friday Sale </span>
+                    <h3 class="title" id="bffModalTitle">Only one £600 Payment, Ever</h3>
+                    <p>Unlock the CORE Best Friends Forever Deal and get CORE Plus for life.
+                      No monthly fees. No renewals. No catch.
+                      Just your entire business on one platform — forever.</p>
+                    <p>Only 1,000 lifetime licences available.</p>
+                    <a target="_blank" href="https://web.fibodo.com/signup/information?app=bff"
+                      class="btn-white-bg animated fadeInUp" data-swiper-animation="fadeInUp" data-duration="2.5s"
+                      data-delay="0.25s">Join Us</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal Overlay -->
         Registration Form Section End -->
 
 
@@ -215,6 +224,8 @@
       }
     });
   </script>
+
+
 </body>
 
 </html>
