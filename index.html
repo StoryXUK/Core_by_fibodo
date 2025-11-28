@@ -54,30 +54,30 @@
     <!--=================================
     BFF Modal -->
     <div class="modal-overlay" id="bffModalOverlay" aria-hidden="true" style="display: none;">
-      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bffModalTitle" id="bffModal">
-        <button class="modal-close" id="bffModalClose" aria-label="Close dialog" title="Close">×</button>
-        <div class="modal__content">
-          <div class="content-wrapper">
-            <section class="space-ptb" id="registration-section">
-              <div class="container">
-                <div class="contact-box bg-dark">
-                  <div class="section-title">
-                    <span class="subtitle">A Once in a Lifetime Offer. </span>
-                    <h3 class="title" id="bffModalTitle">Only one £600 Payment, Ever</h3>
-                    <p>Unlock the CORE Best Friends Forever Deal and get CORE Plus for life.
-                      No monthly fees. No renewals. No catch.
-                      Just your entire business on one platform — forever.</p>
-                    <p>Only 1,000 lifetime licences available.</p>
-                    <a target="_blank" href="https://web.fibodo.com/signup/information?app=bff"
-                      class="btn-white-bg animated fadeInUp" data-swiper-animation="fadeInUp" data-duration="2.5s"
-                      data-delay="0.25s">Join Us</a>
-                  </div>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bffModalTitle" id="bffModal">
+            <button class="modal-close" id="bffModalClose" aria-label="Close dialog" title="Close">×</button>
+            <div class="modal__content">
+                <div class="content-wrapper">
+                    <section class="space-ptb" id="registration-section">
+                        <div class="container">
+                            <div class="contact-box bg-dark">
+                                <div class="section-title">
+                                    <span class="subtitle">A Once in a Lifetime Offer. </span>
+                                    <h3 class="title" id="bffModalTitle">Only one £600 Payment, Ever</h3>
+                                    <p>Unlock the CORE Best Friends Forever Deal and get CORE Plus for life.
+                                        No monthly fees. No renewals. No catch.
+                                        Just your entire business on one platform — forever.</p>
+                                    <p>Only 1,000 lifetime licences available.</p>
+                                    <a target="_blank" href="https://web.fibodo.com/signup/information?app=bff"
+                                        class="btn-white-bg animated fadeInUp" data-swiper-animation="fadeInUp"
+                                        data-duration="2.5s" data-delay="0.25s">Join Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-              </div>
-            </section>
-          </div>
+            </div>
         </div>
-      </div>
     </div>
     <!--=================================
     BFF Modal End -->
@@ -237,12 +237,13 @@
                                                     <div class="item-sub-title">
                                                         <h3 class="sub-title animated fadeInUp"
                                                             data-swiper-animation="fadeInUp" data-duration="1.5s"
-                                                            data-delay="0.25s">Lifetime CORE. One Payment. No Catch.</h3>
+                                                            data-delay="0.25s">Everything You Need. For Life.</h3>
                                                     </div>
                                                     <div class="item-description">
                                                         <p class="animated description fadeInUp"
                                                             data-swiper-animation="fadeInUp" data-duration="1.5s"
-                                                            data-delay="0.25s">£600 forever.<br>No monthly bills.<br>No rising fees.<br>1,000 spaces only — ever.</p>
+                                                            data-delay="0.25s">Unlimited bookings, clients,
+                                                            messaging<br>All CORE Plus features & updates<br>Your business, fully digital - forever</p>
                                                         <p class="animated description fadeInUp"
                                                             data-swiper-animation="fadeInUp" data-duration="1.5s"
                                                             data-delay="0.25s"><strong>CORE BFF — Best Friends
@@ -271,20 +272,16 @@
                                                 <div class="animated hero-item-content" data-swiper-animation="fadeInUp"
                                                     data-duration="1s" data-delay="0.25s">
                                                     <div class="item-sub-title">
-                                                        <h1 class="sub-title animated fadeInUp"
+                                                        <h3 class="sub-title animated fadeInUp"
                                                             data-swiper-animation="fadeInUp" data-duration="1.5s"
-                                                            data-delay="0.25s">Save £4,140+ Over 5 Years</h1>
+                                                            data-delay="0.25s">Lifetime CORE. One Payment. No Catch.
+                                                        </h3>
                                                     </div>
                                                     <div class="item-description">
                                                         <p class="animated description fadeInUp"
                                                             data-swiper-animation="fadeInUp" data-duration="1.5s"
-                                                            data-delay="0.25s">CORE BFF = £600 forever<br>
-                                                            vs<br>
-                                                            £79/month × 60 months = £4,740</p>
-                                                        <p class="animated description fadeInUp"
-                                                            data-swiper-animation="fadeInUp" data-duration="1.5s"
-                                                            data-delay="0.25s">1,000 lifetime licences only.<br>
-                                                            Never repeated.</p>
+                                                            data-delay="0.25s">£600 forever.<br>No monthly bills.<br>No
+                                                            rising fees.<br>1,000 spaces only — ever.</p>
                                                         <p class="animated description fadeInUp"
                                                             data-swiper-animation="fadeInUp" data-duration="1.5s"
                                                             data-delay="0.25s"><strong>CORE BFF — Best Friends
@@ -1601,16 +1598,16 @@
             // Auto-open BFF modal on page load
             const modalOverlay = document.getElementById('bffModalOverlay');
             const modalClose = document.getElementById('bffModalClose');
-            
+
             // Show modal on page load after a short delay
             if (modalOverlay) {
-                setTimeout(function() {
+                setTimeout(function () {
                     modalOverlay.style.display = 'flex';
                     modalOverlay.setAttribute('aria-hidden', 'false');
                     document.body.style.overflow = 'hidden';
                 }, 500);
             }
-            
+
             // Close modal function
             function closeModal() {
                 if (modalOverlay) {
@@ -1619,23 +1616,23 @@
                     document.body.style.overflow = '';
                 }
             }
-            
+
             // Close button click
             if (modalClose) {
                 modalClose.addEventListener('click', closeModal);
             }
-            
+
             // Close on overlay click
             if (modalOverlay) {
-                modalOverlay.addEventListener('click', function(e) {
+                modalOverlay.addEventListener('click', function (e) {
                     if (e.target === modalOverlay) {
                         closeModal();
                     }
                 });
             }
-            
+
             // Close on Escape key
-            document.addEventListener('keydown', function(e) {
+            document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape' && modalOverlay && modalOverlay.style.display === 'flex') {
                     closeModal();
                 }
