@@ -74,34 +74,7 @@
         Registration Form Section -->
 
    
-    <div class="modal-overlay" id="bffModalOverlay" aria-hidden="true" style="display: none;">
-      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bffModalTitle" id="bffModal">
-        <button class="modal-close" id="bffModalClose" aria-label="Close dialog" title="Close">×</button>
-        <div class="modal__content">
-          <div class="content-wrapper">
-            <section class="space-ptb" id="registration-section">
-              <div class="container">
-                <div class="contact-box bg-dark">
-                  <div class="section-title">
-                    <span class="subtitle">A Once in a Lifetime Offer. </span>
-                    <h3 class="title" id="bffModalTitle">Only one £600 Payment, Ever</h3>
-                    <p>Unlock the CORE Best Friends Forever Deal and get CORE Plus for life.
-                      No monthly fees. No renewals. No catch.
-                      Just your entire business on one platform — forever.</p>
-                    <p>Only 1,000 lifetime licences available.</p>
-                    <a target="_blank" href="https://web.fibodo.com/signup/information?app=bff"
-                      class="btn-white-bg animated fadeInUp" data-swiper-animation="fadeInUp" data-duration="2.5s"
-                      data-delay="0.25s">Join Us</a>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Modal Overlay -->
-      
+    
 
 
     <section class="site-content">
@@ -209,63 +182,7 @@
   <!-- Template Scripts (Do not remove)-->
   <script src="js/custom.js"></script>
   <script src="js/loadNav.js"></script>
-  <script>
-    // Check for success parameter in URL
-    window.addEventListener('DOMContentLoaded', function () {
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get('success') === '1') {
-        alert('Thank you!');
-        // Clean URL
-        window.history.replaceState({}, document.title, window.location.pathname);
-      } else if (urlParams.get('error') === '1') {
-        alert('There was an error submitting your registration. Please try again.');
-        window.history.replaceState({}, document.title, window.location.pathname);
-      }
-    });
-
-      // Auto-open BFF modal on page load
-      const modalOverlay = document.getElementById('bffModalOverlay');
-      const modalClose = document.getElementById('bffModalClose');
-      
-      // Show modal on page load after a short delay
-      if (modalOverlay) {
-        setTimeout(function() {
-          modalOverlay.style.display = 'flex';
-          modalOverlay.setAttribute('aria-hidden', 'false');
-          document.body.style.overflow = 'hidden';
-        }, 500);
-      }
-      
-      // Close modal function
-      function closeModal() {
-        if (modalOverlay) {
-          modalOverlay.style.display = 'none';
-          modalOverlay.setAttribute('aria-hidden', 'true');
-          document.body.style.overflow = '';
-        }
-      }
-      
-      // Close button click
-      if (modalClose) {
-        modalClose.addEventListener('click', closeModal);
-      }
-      
-      // Close on overlay click
-      if (modalOverlay) {
-        modalOverlay.addEventListener('click', function(e) {
-          if (e.target === modalOverlay) {
-            closeModal();
-          }
-        });
-      }
-      
-      // Close on Escape key
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modalOverlay && modalOverlay.style.display === 'flex') {
-          closeModal();
-        }
-      });
-  </script>
+  
 
 
 </body>
