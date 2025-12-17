@@ -42,11 +42,23 @@
             background: linear-gradient(135deg, #ffde59 0%, #ff914d 100%);
             color: white;
         }
+        .tab-content-wrapper {
+            position: relative;
+        }
         .tab-content-item {
             display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
         .tab-content-item.active {
             display: block;
+            opacity: 1;
+        }
+        /* Ensure accordion buttons are clickable */
+        .accordion-button {
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
@@ -2824,23 +2836,48 @@
             const tabs = document.querySelectorAll('.feature-tab');
             const tabContents = document.querySelectorAll('.tab-content-item');
 
+            // Initialize Bootstrap Collapse for all accordions
+            function initializeAccordions() {
+                document.querySelectorAll('.accordion-button').forEach(button => {
+                    const target = button.getAttribute('data-bs-target');
+                    const collapseElement = document.querySelector(target);
+                    
+                    if (collapseElement && !bootstrap.Collapse.getInstance(collapseElement)) {
+                        // Initialize Bootstrap Collapse
+                        new bootstrap.Collapse(collapseElement, {
+                            toggle: false
+                        });
+                    }
+                });
+            }
+
+            // Initialize on page load
+            initializeAccordions();
+
             tabs.forEach(tab => {
                 tab.addEventListener('click', function() {
                     const targetTab = this.getAttribute('data-tab');
 
                     // Remove active class from all tabs and contents
                     tabs.forEach(t => t.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
+                    tabContents.forEach(content => {
+                        if (content.classList.contains('active')) {
+                            content.classList.remove('active');
+                        }
+                    });
 
                     // Add active class to clicked tab and corresponding content
                     this.classList.add('active');
-                    document.getElementById(targetTab).classList.add('active');
+                    const activeContent = document.getElementById(targetTab);
+                    activeContent.classList.add('active');
 
                     // Scroll to top of content
-                    document.querySelector('.tab-content-wrapper').scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'start' 
-                    });
+                    setTimeout(() => {
+                        document.querySelector('.tab-content-wrapper').scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'start' 
+                        });
+                    }, 100);
                 });
             });
         });
