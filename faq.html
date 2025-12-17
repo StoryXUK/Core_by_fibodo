@@ -77,7 +77,7 @@
                         <div class="section-title text-center mb-5">
                             <span class="subtitle">FAQs</span>
                             <h2 class="title">Frequently Asked questions</h2>
-                            <!-- <p>Select a feature below to view related questions and answers</p> -->
+                            <p style="color: green; font-weight: bold;" id="debug-status">Loading...</p>
                         </div>
                     </div>
                 </div>
@@ -2827,60 +2827,107 @@
     <!-- JavaScript -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/loadNav.js"></script>
-
-    <!-- Tab Switching Script -->
+    
+    <!-- Tab Switching Script - Load BEFORE custom.js to avoid conflicts -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabs = document.querySelectorAll('.feature-tab');
-            const tabContents = document.querySelectorAll('.tab-content-item');
+        (function() {
+            'use strict';
+            
+            console.log('FAQ Tab Script Loading...');
+            
+            function initFAQTabs() {
+                const tabs = document.querySelectorAll('.feature-tab');
+                const tabContents = document.querySelectorAll('.tab-content-item');
+                
+                console.log('Initializing FAQ tabs. Found:', tabs.length, 'tabs and', tabContents.length, 'content sections');
 
-            // Initialize Bootstrap Collapse for all accordions
-            function initializeAccordions() {
-                document.querySelectorAll('.accordion-button').forEach(button => {
-                    const target = button.getAttribute('data-bs-target');
-                    const collapseElement = document.querySelector(target);
+                if (tabs.length === 0) {
+                    console.error('No tabs found!');
+                    return;
+                }
+
+                // Tab switching functionality with high priority
+                tabs.forEach(function(tab, index) {
+                    // Remove any existing listeners
+                    const newTab = tab.cloneNode(true);
+                    tab.parentNode.replaceChild(newTab, tab);
                     
-                    if (collapseElement && !bootstrap.Collapse.getInstance(collapseElement)) {
-                        // Initialize Bootstrap Collapse
-                        new bootstrap.Collapse(collapseElement, {
-                            toggle: false
+                    newTab.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        e.stopImmediatePropagation();
+                        
+                        const targetTab = this.getAttribute('data-tab');
+                        console.log('Tab clicked:', targetTab);
+
+                        // Remove active from all
+                        document.querySelectorAll('.feature-tab').forEach(function(t) {
+                            t.classList.remove('active');
                         });
-                    }
+                        document.querySelectorAll('.tab-content-item').forEach(function(content) {
+                            content.classList.remove('active');
+                        });
+
+                        // Add active to clicked
+                        this.classList.add('active');
+                        
+                        const activeContent = document.getElementById(targetTab);
+                        if (activeContent) {
+                            activeContent.classList.add('active');
+                            console.log('✓ Activated:', targetTab);
+                            
+                            // Scroll to content
+                            setTimeout(function() {
+                                activeContent.scrollIntoView({ 
+                                    behavior: 'smooth', 
+                                    block: 'start' 
+                                });
+                            }, 100);
+                        } else {
+                            console.error('✗ Content not found:', targetTab);
+                        }
+                    }, true); // Use capture phase
                 });
+
+                console.log('✓ FAQ tabs initialized successfully');
+                
+                // Update debug status
+                const debugStatus = document.getElementById('debug-status');
+                if (debugStatus) {
+                    debugStatus.textContent = '✓ Tabs initialized - Click any tab above';
+                    debugStatus.style.color = 'green';
+                }
             }
 
-            // Initialize on page load
-            initializeAccordions();
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    const targetTab = this.getAttribute('data-tab');
-
-                    // Remove active class from all tabs and contents
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tabContents.forEach(content => {
-                        if (content.classList.contains('active')) {
-                            content.classList.remove('active');
-                        }
-                    });
-
-                    // Add active class to clicked tab and corresponding content
-                    this.classList.add('active');
-                    const activeContent = document.getElementById(targetTab);
-                    activeContent.classList.add('active');
-
-                    // Scroll to top of content
-                    setTimeout(() => {
-                        document.querySelector('.tab-content-wrapper').scrollIntoView({ 
-                            behavior: 'smooth', 
-                            block: 'start' 
-                        });
-                    }, 100);
-                });
+            // Initialize immediately when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initFAQTabs);
+            } else {
+                initFAQTabs();
+            }
+            
+            // Also try on window load as backup
+            window.addEventListener('load', function() {
+                // Check if tabs are working, if not reinitialize
+                const firstTab = document.querySelector('.feature-tab');
+                if (firstTab && !firstTab.onclick) {
+                    console.log('Reinitializing tabs on window load...');
+                    initFAQTabs();
+                }
+                
+                // Final status update
+                setTimeout(function() {
+                    const debugStatus = document.getElementById('debug-status');
+                    if (debugStatus) {
+                        const tabCount = document.querySelectorAll('.feature-tab').length;
+                        debugStatus.textContent = '✓ Ready - ' + tabCount + ' tabs available';
+                    }
+                }, 500);
             });
-        });
+        })();
     </script>
+    
+    <script src="js/custom.js"></script>
+    <script src="js/loadNav.js"></script>
 </body>
 </html>
