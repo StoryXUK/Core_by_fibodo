@@ -12400,3 +12400,93 @@ body.modal-open {
   font-size: 20px !important;
   line-height: 30px !important;
 }
+
+/* How-To Guide Content Pages */
+.how-to-content h2 {
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  color: #0d1615;
+}
+
+.how-to-content h3 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  color: #0d1615;
+}
+
+.how-to-content p {
+  font-size: 17px;
+  line-height: 30px;
+  color: #606060;
+  margin-bottom: 16px;
+}
+
+.how-to-content ul,
+.how-to-content ol {
+  margin-bottom: 20px;
+  padding-left: 24px;
+}
+
+.how-to-content li {
+  font-size: 17px;
+  line-height: 30px;
+  color: #606060;
+  margin-bottom: 8px;
+}
+
+.how-to-content li ul,
+.how-to-content li ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.how-to-content hr {
+  border: none;
+  border-top: 1px solid #e8e8e8;
+  margin: 40px 0;
+}
+
+.how-to-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.how-to-content code {
+  background: #f5f5f5;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 15px;
+  color: #0d1615;
+}
+
+.how-to-content strong {
+  color: #0d1615;
+}
+
+.how-to-content .lead {
+  font-size: 19px;
+  line-height: 32px;
+  color: #434343;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 991px) {
+  .how-to-content h2 {
+    font-size: 24px;
+    line-height: 34px;
+    margin-top: 32px;
+  }
+  .how-to-content h3 {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 24px;
+  }
+}
